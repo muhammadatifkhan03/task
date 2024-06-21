@@ -1,21 +1,25 @@
 // Sample data for slider items
 const sliderData = [
   {
-    imageUrl: "assets/slider11.png",
-    title: "Slide 1 Title",
-    description: "Description for Slide 1.",
+    imageUrl: "assets/slider1.png",
+    title: "Abbie Harvey 1",
+    description:
+      "I have been caring for my mom & dad off and on for about 10 years now, and I know the importance of me being there for appointments. Older people need attention, love and care that they truly deserve.",
   },
   {
-    imageUrl: "assets/slider12.png",
-    title: "Slide 2 Title",
-    description: "Description for Slide 2.",
+    imageUrl: "assets/slider2.png",
+    title: "Abbie Harvey 2",
+    description:
+      "I have been caring for my mom & dad off and on for about 10 years now, and I know the importance of me being there for appointments. Older people need attention, love and care that they truly deserve.",
   },
   {
-    imageUrl: "assets/slider13.png",
-    title: "Slide 3 Title",
-    description: "Description for Slide 3.",
+    imageUrl: "assets/slider3.png",
+    title: "Abbie Harvey 3",
+    description:
+      "I have been caring for my mom & dad off and on for about 10 years now, and I know the importance of me being there for appointments. Older people need attention, love and care that they truly deserve.",
   },
 ];
+
 let slideIndex = 1;
 
 // Function to initialize slider with data
@@ -28,10 +32,10 @@ function initSlider() {
     const slide = document.createElement("div");
     slide.classList.add("slide");
     slide.innerHTML = `
-            <img src="${item.imageUrl}" alt="${item.title}">
-            <h3>${item.title}</h3>
+            <img src="${item.imageUrl}" alt="${item.title}" >
+          <div class='img-slide'>  <h3 >${item.title}</h3>
             <p>${item.description}</p>
-        `;
+       </div> `;
     slidesContainer.appendChild(slide);
 
     // Create indicator element
@@ -99,6 +103,22 @@ window.onload = initSlider;
 
 // Add event listener to hide breadcrumb menu when clicking outside
 document.addEventListener("click", hideMenu);
+
+let timer;
+
+document.addEventListener("input", (e) => {
+  const el = e.target;
+  console.log("el", el);
+  if (el.matches("[data-color]")) {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      document.documentElement.style.setProperty(
+        `--color-${el.dataset.color}`,
+        el.value
+      );
+    }, 100);
+  }
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   const buttons = document.querySelectorAll(".tooltip-button");
