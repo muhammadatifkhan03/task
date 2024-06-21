@@ -1,1 +1,0 @@
-web: python manage.py migrate && python manage.py createhorillauser && python manage.py compilemessages && python manage.py runserver 0.0.0.0:$PORT

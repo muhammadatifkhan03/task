@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dynamic Slider Example</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+
+  <script src="https://kit.fontawesome.com/863e8e3169.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <img src="assets/spirallogo.png" alt="Logo" class="logo" />
+    <div class="nav-items-conatiner">
+      <nav class="nav-container">
+        <ul id="nav-items">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="breadcrumb" id="breadcrumb">
+          <span id="breadcrumb-icon" onclick="toggleMenu()">☰</span>
+          <ul id="breadcrumb-items" class="hidden">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+              CALL NOW FOR A CONSULT
+              <span class="light_color">XXX.XXX.XXXX</span>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <h3 class="nav-contact">
+        CALL NOW FOR A CONSULT <span class="light_color">XXX.XXX.XXXX</span>
+      </h3>
+    </div>
+  </header>
+
+  <section id="section1">
+    <div class="content">
+      <div class="text-box">
+        <h2>GET AN INTERVENTION</h2>
+        <p>
+          Showing greater respect to older adults can be done in several ways:
+          acknowledging and putting to use the talents and skills of older
+          adults; creating intergenerational initiatives; and allowing older
+          adults to stay active and independent for as long as possible.
+        </p>
+      </div>
+
+      <div class="form-box gradient_bg">
+        <div class="contact">
+          <h1>Contact Us</h1>
+          <div class="form-text">
+            <div class="form-group">
+              <input type="text" id="input" placeholder=" " required />
+              <label for="input">First Name</label>
+            </div>
+            <div class="form-group">
+              <input type="text" id="input" placeholder=" " required />
+              <label for="input">Last Name</label>
+            </div>
+          </div>
+          <div class="form-text">
+            <div class="form-group">
+              <input type="text" id="input" placeholder=" " required />
+              <label for="input">Business Email</label>
+            </div>
+            <div class="form-group">
+              <input type="text" id="input" placeholder=" " required />
+              <label for="input">Company</label>
+            </div>
+          </div>
+          <div id="contact-form">
+            <p class="full">
+              <select id="country" name="country" required>
+                <option value="" disabled selected>
+                  Select your Country
+                </option>
+                <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+                <option value="UK">UK</option>
+                <option value="Australia">Australia</option>
+              </select>
+            </p>
+            <p class="btn-para">
+              <button type="submit" class="submit-btn">
+                <span>&#10148;</span> Submit
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="section2">
+    <div class="section-container">
+      <div class="section-container-item">
+        <img class="sec_image" src="assets/section1.png" alt="section1 image" />
+      </div>
+      <div class="section-container-item">
+        <img class="sec_image" src="assets/section2.png" alt="section1 image" />
+      </div>
+      <div class="section-container-item">
+        <img class="sec_image" src="assets/section3.png" alt="section1 image" />
+      </div>
+    </div>
+  </section>
+
+  <section id="section3 bg-gray">
+    <div class="section3_container">
+      <h1 class="heading_content">
+        <span class="heading_content_stroke">WE</span> UNDERSTAND
+      </h1>
+      <div class="section-container align-start">
+        <div class="flex-container">
+          <span class="flex-item desc_text">Older adults want to play active and meaningful roles in their
+            lives, including as part of a social network, a neighborhood,
+            and a community. Service providers and policymakers must
+            consider that a lack of sense of purpose can become problematic
+            as people age. Engaging them in leisure activities and volunteer
+            work is important.</span>
+          <span class="flex-item desc_text">Older adults want to stay active and contribute to society in a
+            reciprocal manner (meaning that they want to exchange their
+            services and skills with others for the mutual benefit of the
+            neighborhood or community). Qualitative and quantitative studies
+            published from 2005 to 2016 examining the social needs of older
+            adults were eligible for inclusion.</span>
+
+          <div class="flex-item multi_item">
+            <div>
+              <span class="desc_text">To stimulate social contacts, neighborhood initiatives can be
+                developed. Social meeting places, such as pubs and churches can
+                help to foster the development of close and peripheral
+                relationships.
+              </span>
+            </div>
+            <button class="button-container">
+              90% Succes Rate
+              <i class="fa-solid fa-arrow-right" style="width: 17px"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section id="section3">
+    <div class="slider">
+      <div class="slides" id="slides">
+        <!-- Slides will be inserted here dynamically -->
+      </div>
+      <button class="prev" onclick="moveSlide(-1)">
+        &#10094;
+      </button>
+      <button class="next" onclick="moveSlide(1)">
+        &#10095;
+      </button>
+    </div>
+    <div class="indicators" id="indicators">
+      <!-- Indicators will be inserted here dynamically -->
+    </div>
+  </section>
+
+  <section id="section5" class='bg_white'>
+    <div class="section5_container">
+
+    <h1 class="heading_content">
+      <span class="heading_content_stroke">WE</span> CAN ORGANIZE EVERYTHING
+    </h1>
+    <div class="flex-container" style='padding-top: 1rem;'>
+      <div class="flex-item">
+        <span class="desc_text"><span style='font-weight: 800;'>Interventions</span> should focus on older adult’s
+          desire for connectedness, participation and independence.</span>
+      </div>
+      <span class="flex-item">Older adults want to play active and meaningful roles in their lives,
+        including as part of a social network, a neighborhood, and a
+        community. Service providers and policymakers must consider that a
+        lack of sense of purpose can become problematic as people age.
+        Engaging them in leisure activities and volunteer work is
+        important.</span>
+      <span class="flex-item">Older adults want to play active and meaningful roles in their lives,
+        including as part of a social network, a neighborhood, and a
+        community. Service providers and policymakers must consider that a
+        lack of sense of purpose can become problematic as people age.
+        Engaging them in leisure activities and volunteer work is
+        important.</span>
+
+    </div>
+    <div class="section8-button-container">
+      <div class="button-group">
+        <button class="tooltip-button button-sec-8">Needs Assesment<span class="tooltip-icon"><i
+              class="fa-solid fa-circle-info"></i></span>
+          <span class="tooltip-text">We’re experienced in our individual crafts and understand how each one of our roles
+            impacts your plan holistically.</span>
+        </button>
+        <button class="tooltip-button button-sec-8">Treatment Planning & Placement<span class="tooltip-icon"><i
+              class="fa-solid fa-circle-info"></i></span>
+          <span class="tooltip-text">We’re experienced in our individual crafts and understand how each one of our roles
+            impacts your plan holistically.</span>
+        </button>
+        <button class="tooltip-button button-sec-8">Transportation & Logistics<span class="tooltip-icon"><i
+              class="fa-solid fa-circle-info"></i></span>
+          <span class="tooltip-text">We’re experienced in our individual crafts and understand how each one of our roles
+            impacts your plan holistically.</span>
+        </button>
+        <button class="tooltip-button button-sec-8">Insurance Advocacy<span class="tooltip-icon"><i
+              class="fa-solid fa-circle-info"></i></span>
+          <span class="tooltip-text">We’re experienced in our individual crafts and understand how each one of our roles
+            impacts your plan holistically.</span>
+        </button>
+        <button class="tooltip-button button-sec-8">Employment Advocacy<span class="tooltip-icon"><i
+              class="fa-solid fa-circle-info"></i></span>
+          <span class="tooltip-text">We’re experienced in our individual crafts and understand how each one of our roles
+            impacts your plan holistically.</span>
+        </button>
+        <button class="tooltip-button button-sec-8">Aftercare Planning<span class="tooltip-icon"><i
+              class="fa-solid fa-circle-info"></i></span>
+          <span class="tooltip-text">We’re experienced in our individual crafts and understand how each one of our roles
+            impacts your plan holistically.</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  
+
+
+  <footer class='footer'>
+    <p>&copy; 2021 Get an Intervention Inc. All rights reserved.</p>
+    <div>
+      <a href="#" >Privacy Policy</a>
+      <span>|</span>
+      <a href="#">Terms of Use</a>
+      <span>|</span>
+      <a href="#" >Site Map</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
