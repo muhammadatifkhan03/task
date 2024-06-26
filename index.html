@@ -4,10 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dynamic Slider Example</title>
+  <title>Rohullah Ramish Test</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-
   <script src="https://kit.fontawesome.com/863e8e3169.js" crossorigin="anonymous"></script>
 </head>
 
@@ -21,7 +19,6 @@
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-
         <div class="breadcrumb" id="breadcrumb">
           <span id="breadcrumb-icon" onclick="toggleMenu()">☰</span>
           <ul id="breadcrumb-items" class="hidden">
@@ -41,67 +38,73 @@
     </div>
   </header>
 
-  <section id="section1">
+  <section id="section1" >
     <div class="section1_container">
       <div class="text-box">
         <h1 class="heading_content_header">
           <span class="heading_content_stroke_header">GET AN</span>
-        </h1>
-        <h1 class="heading_content_header">
           INTERVENTION
         </h1>
-        <p class='sec1_desc'>
+        <p class="sec1_desc">
           Showing greater respect to older adults can be done in several ways:
           acknowledging and putting to use the talents and skills of older
           adults; creating intergenerational initiatives; and allowing older
           adults to stay active and independent for as long as possible.
         </p>
       </div>
-
       <div class="form-box gradient_bg">
         <div class="contact">
           <h1>Contact Us</h1>
-          <div class="form-text">
-            <div class="form-group">
-              <input type="text" id="input" placeholder=" " required />
-              <label for="input">First Name</label>
+          <form id="contactForm" novalidate>
+            <div class="form-text">
+              <div class="form-group">
+                <input type="text" id="firstName" name="firstName" placeholder=" " />
+                <label for="firstName">First Name</label>
+                <div class="popup-message" id="firstNameError"></div>
+              </div>
+              <div class="form-group">
+                <input type="text" id="lastName" name="lastName" placeholder=" " />
+                <label for="lastName">Last Name</label>
+                <div class="popup-message" id="lastNameError"></div>
+              </div>
             </div>
-            <div class="form-group">
-              <input type="text" id="input" placeholder=" " required />
-              <label for="input">Last Name</label>
+            <div class="form-text">
+              <div class="form-group">
+                <input type="email" id="businessEmail" name="businessEmail" placeholder=" " />
+                <label for="businessEmail">Business Email</label>
+                <div class="popup-message" id="emailError"></div>
+              </div>
+              <div class="form-group">
+                <input type="text" id="company" name="company" placeholder=" " />
+                <label for="company">Company</label>
+                <div class="popup-message" id="companyError"></div>
+              </div>
             </div>
-          </div>
-          <div class="form-text">
-            <div class="form-group">
-              <input type="text" id="input" placeholder=" " required />
-              <label for="input">Business Email</label>
+            <div id="contact-form">
+              <div style="position: relative; margin-top: 20px">
+                <select id="country" name="country" style="margin: 0; border-radius: 4px; padding: 10px">
+                  <option value="" disabled selected>
+                    Select your Country
+                  </option>
+                  <option value="USA">USA</option>
+                  <option value="Canada">Canada</option>
+                  <option value="UK">UK</option>
+                  <option value="Australia">Australia</option>
+                </select>
+                <div class="popup-message" id="countryError"></div>
+              </div>
+              <button type="submit" class="submit-btn" style="margin-top: 20px">
+                <span>&#10148;</span>&nbsp; &nbsp;Submit
+              </button>
             </div>
-            <div class="form-group">
-              <input type="text" id="input" placeholder=" " required />
-              <label for="input">Company</label>
-            </div>
-          </div>
-          <div id="contact-form">
-            <!-- <p class="full"> -->
-            <select id="country" name="country" required>
-              <option value="" disabled selected>
-                Select your Country
-              </option>
-              <option value="USA">USA</option>
-              <option value="Canada">Canada</option>
-              <option value="UK">UK</option>
-              <option value="Australia">Australia</option>
-            </select>
-            <!-- </p> -->
-            <!-- <p class="btn-para"> -->
-            <button type="submit" class="submit-btn">
-              <span>&#10148;  </span>&nbsp; Submit
-            </button>
-            <!-- </p> -->
-          </div>
+          </form>
         </div>
       </div>
     </div>
+  </section>
+
+  <section id="sec_img">
+    <img class="" alt="" src="assets/sec_img.png" />
   </section>
 
   <section id="section3">
@@ -117,132 +120,195 @@
       </div>
     </div>
     <div class="section3_container">
-      <h1 class="heading_content">
-        <span class="heading_content_stroke">WE</span> UNDERSTAND
-      </h1>
+      <div class='headingBox'>
+        <h1 class="heading_content">
+          <span class="heading_content_stroke">WE</span> UNDERSTAND
+        </h1>
+      </div>
       <div class="section-container align-start">
         <div class="flex-container">
           <span class="flex-item desc_text">Older adults want to play active and meaningful roles in their
-            lives, including as part of a social network, a neighborhood,
-            and a community. Service providers and policymakers must
-            consider that a lack of sense of purpose can become problematic
-            as people age. Engaging them in leisure activities and volunteer
-            work is important.</span>
+            lives, including as part of a social network, a neighborhood, and
+            a community. Service providers and policymakers must consider that
+            a lack of sense of purpose can become problematic as people age.
+            Engaging them in leisure activities and volunteer work is
+            important.</span>
           <span class="flex-item desc_text">Older adults want to stay active and contribute to society in a
             reciprocal manner (meaning that they want to exchange their
             services and skills with others for the mutual benefit of the
             neighborhood or community). Qualitative and quantitative studies
             published from 2005 to 2016 examining the social needs of older
             adults were eligible for inclusion.</span>
-
           <div class="flex-item multi_item">
             <div>
               <span class="desc_text">To stimulate social contacts, neighborhood initiatives can be
-                developed. Social meeting places, such as pubs and churches can
-                help to foster the development of close and peripheral
-                relationships.
-              </span>
+                developed. Social meeting places, such as pubs and churches
+                can help to foster the development of close and peripheral
+                relationships.</span>
             </div>
             <button class="button-container">
-              90% Succes Rate
-              <i class="fa-solid fa-arrow-right" style="width: 17px"></i>
+              90% Success Rate <i class="fa-solid fa-arrow-right"></i>
             </button>
           </div>
         </div>
       </div>
+    </div>
   </section>
 
-  <section id="section4" class='bg_white'>
-    <div class="slider">
-      <div class="slides" id="slides">
+  <section id="section4" class="bg_white">
+    <div class="section4_container">
+      <div class="slider">
+        <div class="slides" id="slides"></div>
+        <button class="prev" onclick="moveSlide(-1)">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="next" onclick="moveSlide(1)">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
       </div>
-      <button class="prev" onclick="moveSlide(-1)">
-        <!-- &#10094; -->
-        <i class="fa-solid fa-chevron-left"></i>
-      </button>
-      <button class="next" onclick="moveSlide(1)">
-        <!-- &#10095; -->
-        <i class="fa-solid fa-chevron-right"></i>
-      </button>
-    </div>
-    <div class="indicators" id="indicators">
+      <div class="indicators" id="indicators"></div>
     </div>
   </section>
 
-  <section id="section5" class='bg_white'>
+  <section id="section5" class="bg_white">
     <div class="section5_container">
-
-      <h1 class="heading_content">
-        <span class="heading_content_stroke">WE</span> CAN ORGANIZE EVERYTHING
-      </h1>
-      <div class="flex-container" style='padding-top: 1rem;'>
-        <div class="flex-item">
-          <span class="desc_text"><span style='font-weight: 800;'>Interventions</span> should focus on older adult’s
-            desire for connectedness, participation and independence.</span>
-        </div>
-        <span class="flex-item">Older adults want to play active and meaningful roles in their lives,
-          including as part of a social network, a neighborhood, and a
-          community. Service providers and policymakers must consider that a
-          lack of sense of purpose can become problematic as people age.
-          Engaging them in leisure activities and volunteer work is
-          important.</span>
-        <span class="flex-item">Older adults want to play active and meaningful roles in their lives,
-          including as part of a social network, a neighborhood, and a
-          community. Service providers and policymakers must consider that a
-          lack of sense of purpose can become problematic as people age.
-          Engaging them in leisure activities and volunteer work is
-          important.</span>
-
+      <div class='headingBox'>
+        <h1 class="heading_content">
+          <span class="heading_content_stroke">WE</span> CAN ORGANIZE EVERYTHING
+        </h1>
       </div>
-      <div class="section8-button-container">
+
+      <div class="flex-container" style="padding-top: 1rem">
+        <div class="flex-item">
+          <span class="desc_text"><span style="font-weight: 800">Interventions</span> should focus
+            on older adult’s desire for connectedness, participation and
+            independence.</span>
+        </div>
+        <span class="flex-item">Older adults want to play active and meaningful roles in their
+          lives, including as part of a social network, a neighborhood, and a
+          community. Service providers and policymakers must consider that a
+          lack of sense of purpose can become problematic as people age.
+          Engaging them in leisure activities and volunteer work is
+          important.</span>
+        <span class="flex-item">Older adults want to play active and meaningful roles in their
+          lives, including as part of a social network, a neighborhood, and a
+          community. Service providers and policymakers must consider that a
+          lack of sense of purpose can become problematic as people age.
+          Engaging them in leisure activities and volunteer work is
+          important.</span>
+      </div>
+      <div class="section5-button-container">
         <div class="button-group">
-          <button class="tooltip-button button-sec-8">Needs Assesment<span class="tooltip-icon"><i
-                class="fa-solid fa-circle-info"></i></span>
-            <span class="tooltip-text">We’re experienced in our individual crafts and understand how each one of our
-              roles
-              impacts your plan holistically.</span>
+          <button class="tooltip-button button-sec-8">
+            Needs Assessment
+            <span class="tooltip-icon"><img src='assets/info.png' alt='tooltip info' /></i></span>
+            <span class="tooltip-text">We’re experienced in our individual crafts and understand how
+              each one of our roles impacts your plan holistically.</span>
           </button>
-          <button class="tooltip-button button-sec-8">Treatment Planning & Placement<span class="tooltip-icon"><i
-                class="fa-solid fa-circle-info"></i></span>
-            <span class="tooltip-text">We’re experienced in our individual crafts and understand how each one of our
-              roles
-              impacts your plan holistically.</span>
+          <button class="tooltip-button button-sec-8">
+            Treatment Planning & Placement
+            <span class="tooltip-icon"><img src='assets/info.png' alt='tooltip info' /></i></span>
+            <span class="tooltip-text">We’re experienced in our individual crafts and understand how
+              each one of our roles impacts your plan holistically.</span>
           </button>
-          <button class="tooltip-button button-sec-8">Transportation & Logistics<span class="tooltip-icon"><i
-                class="fa-solid fa-circle-info"></i></span>
-            <span class="tooltip-text">We’re experienced in our individual crafts and understand how each one of our
-              roles
-              impacts your plan holistically.</span>
+          <button class="tooltip-button button-sec-8">
+            Transportation & Logistics
+            <span class="tooltip-icon"><img src='assets/info.png' alt='tooltip info' /></i></span>
+            <span class="tooltip-text">We’re experienced in our individual crafts and understand how
+              each one of our roles impacts your plan holistically.</span>
           </button>
-          <button class="tooltip-button button-sec-8">Insurance Advocacy<span class="tooltip-icon"><i
-                class="fa-solid fa-circle-info"></i></span>
-            <span class="tooltip-text">We’re experienced in our individual crafts and understand how each one of our
-              roles
-              impacts your plan holistically.</span>
+          <button class="tooltip-button button-sec-8">
+            Insurance Advocacy
+            <span class="tooltip-icon"><img src='assets/info.png' alt='tooltip info' /></i></span>
+            <span class="tooltip-text">We’re experienced in our individual crafts and understand how
+              each one of our roles impacts your plan holistically.</span>
           </button>
-          <button class="tooltip-button button-sec-8">Employment Advocacy<span class="tooltip-icon"><i
-                class="fa-solid fa-circle-info"></i></span>
-            <span class="tooltip-text">We’re experienced in our individual crafts and understand how each one of our
-              roles
-              impacts your plan holistically.</span>
+          <button class="tooltip-button button-sec-8">
+            Employment Advocacy
+            <span class="tooltip-icon"><img src='assets/info.png' alt='tooltip info' /></i></span>
+            <span class="tooltip-text">We’re experienced in our individual crafts and understand how
+              each one of our roles impacts your plan holistically.</span>
           </button>
-          <button class="tooltip-button button-sec-8">Aftercare Planning<span class="tooltip-icon"><i
-                class="fa-solid fa-circle-info"></i></span>
-            <span class="tooltip-text">We’re experienced in our individual crafts and understand how each one of our
-              roles
-              impacts your plan holistically.</span>
+          <button class="tooltip-button button-sec-8">
+            Aftercare Planning
+            <span class="tooltip-icon"><img src='assets/info.png' alt='tooltip info' /></i></span>
+            <span class="tooltip-text">We’re experienced in our individual crafts and understand how
+              each one of our roles impacts your plan holistically.</span>
           </button>
         </div>
       </div>
     </div>
   </section>
 
+  <section id="section6">
+    <div class="section6-container">
+      <div class="sec6-text-box">
+        <div class='headingBox'>
+          <h1 class="heading_content-6">
+            <span class="heading_content_stroke_header section6heading">Watch</span>
+            The Video
+          </h1>
+        </div>
 
+        <div class="sec6-content">
+          <div class="sec6-content-box">
+            <img src="assets/Checkmark.png" alt="checkmark" />
+            <div class="sec6-content-box-text">
+              <h3 class="sec6-heading">Needs Assessment</h3>
+              <p class="sec6-desc">
+                The Advocacy Evaluation Toolkit contains the instruments used
+                to collect data for evaluating the Consumer Voices for
+                Coverage program.
+              </p>
+            </div>
+          </div>
+          <div class="sec6-content-box">
+            <img src="assets/Checkmark.png" alt="checkmark" />
+            <div class="sec6-content-box-text">
+              <h3 class="sec6-heading">Needs Assessment</h3>
+              <p class="sec6-desc">
+                The Advocacy Evaluation Toolkit contains the instruments used
+                to collect data for evaluating the Consumer Voices for
+                Coverage program.
+              </p>
+            </div>
+          </div>
+          <div class="sec6-content-box">
+            <img src="assets/Checkmark.png" alt="checkmark" />
+            <div class="sec6-content-box-text">
+              <h3 class="sec6-heading">Needs Assessment</h3>
+              <p class="sec6-desc">
+                The Advocacy Evaluation Toolkit contains the instruments used
+                to collect data for evaluating the Consumer Voices for
+                Coverage program.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img class="sec6-img-lg" src="assets/sec6-lg.png" alt="sec6-lg" />
+      <img class="sec6-img-sm" src="assets/sec6-sm.png" alt="sec6-sm" />
+      <div class="sec6-video-box">
+        <div class="video-container">
+          <video id="videoPlayer">
+            <source src="assets/demo-video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="playcontainer" id="playButton">
+            <div class="circle"></div>
+            <div class="image_container">
+              <img src="assets/Play_Button.png" alt="Play Button" class="object-cover" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="assets/footericon.png" alt="spralfooter" class="spiral-fooer" />
+  </section>
 
-
-  <footer class='footer'>
+  <footer class="footer">
     <p>&copy; 2021 Get an Intervention Inc. All rights reserved.</p>
-    <div>
+    <div class="footer-links">
       <a href="#">Privacy Policy</a>
       <span>|</span>
       <a href="#">Terms of Use</a>
